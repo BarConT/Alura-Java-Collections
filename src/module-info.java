@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author BarConT
+ *
+ */
+module Collections {
+}
