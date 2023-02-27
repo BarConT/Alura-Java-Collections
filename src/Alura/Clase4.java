@@ -2,6 +2,8 @@ package Alura;
 
 import java.util.ArrayList;
 
+import model.Curso;
+
 public class Clase4 {
 
 	public static void main(String... args) {
