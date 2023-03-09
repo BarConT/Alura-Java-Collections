@@ -3,9 +3,11 @@ package model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class Curso implements Comparable<Curso> {
 
@@ -14,6 +16,7 @@ public class Curso implements Comparable<Curso> {
 	private List<Aula> listAula = new ArrayList<>();
 	private Collection<Alumno> alumnos = new HashSet<>();
 	// private Collection<Alumno> alumnos = new LinkedList();
+	private Map<String, Alumno> alumnoMap = new HashMap<>();
 
 	public Curso(String nombre, int tiempo) {
 		this.nombre = nombre;
@@ -66,6 +69,7 @@ public class Curso implements Comparable<Curso> {
 	
 	public void agregarAlumno(Alumno alumno) {
 		this.alumnos.add(alumno);
+		this.alumnoMap.put(alumno.getCodigo(), alumno);
 	}
 	
 	public boolean verificarAlumno(Alumno alumno) {
@@ -76,5 +80,8 @@ public class Curso implements Comparable<Curso> {
 		return alumnos;
 	}
 	
+	public Map<String, Alumno> getAlumnosMap() {
+		return this.alumnoMap;
+	}
 	
 }
